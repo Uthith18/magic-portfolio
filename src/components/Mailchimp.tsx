@@ -2,9 +2,10 @@
 
 import { mailchimp } from "@/resources";
 import { Button, Heading, Input, Text, Background, Column, Row } from "@once-ui-system/core";
-import { opacity, SpacingToken } from "@once-ui-system/core";
+import type { opacity, SpacingToken } from "@once-ui-system/core";
 import { useState } from "react";
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeout: ReturnType<typeof setTimeout>;
   return ((...args: Parameters<T>) => {
