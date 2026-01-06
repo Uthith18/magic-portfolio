@@ -59,35 +59,35 @@ export default function Home() {
             </RevealFx>
 
             {/* Subline */}
-                <RevealFx translateY="8" delay={0.1} fillWidth horizontal="center">
-                  <Text
-                    wrap="balance"
-                    variant="heading-default-xl"
-                    style={{
-                      color: "#fff",
-                      textShadow: "0 2px 14px rgba(0,0,0,0.75)",
-                    }}
-                  >
-                    <span className="typewriterBlock">
-                      Hey, I’m Uthith. I build software, play with data
-                      <br />
-                      and occasionally pretend I know what I’m doing.
-                      <br />
-                      Mostly though, I just enjoy making computers
-                      <br />
-                      do useful (and sometimes fun) things.
-                    </span>
-                  </Text>
-                </RevealFx>
+            <RevealFx translateY="8" delay={0.1} fillWidth horizontal="center">
+              <Text
+                wrap="balance"
+                variant="heading-default-xl"
+                style={{
+                  color: "#fff",
+                  textShadow: "0 2px 14px rgba(0,0,0,0.75)",
+                }}
+              >
+                <span className="typewriterBlock">
+                  Hey, I’m Uthith. I build software, play with data
+                  <br />
+                  and occasionally pretend I know what I’m doing.
+                  <br />
+                  Mostly though, I just enjoy making computers
+                  <br />
+                  do useful (and sometimes fun) things.
+                </span>
+              </Text>
+            </RevealFx>
 
             {/* CTA ROW */}
             <RevealFx delay={0.2} horizontal="center" fillWidth paddingTop="16">
-              <Row gap="16" wrap s={{ direction: "column" }} horizontal="center">
+              <Row gap="l" wrap s={{ direction: "column" }} horizontal="center">
                 <Button data-border="rounded" href={about.path} variant="primary" size="l" arrowIcon>
-                  <Row gap="10" vertical="center" paddingRight="6">
+                  <Row gap="m" vertical="center" paddingRight="s">
                     {about.avatar.display && (
                       <Avatar
-                        marginRight="8"
+                        marginRight="s"
                         style={{ marginLeft: "-0.75rem" }}
                         src={person.avatar}
                         size="m"
