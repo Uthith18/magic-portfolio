@@ -1,4 +1,4 @@
-import {
+import type {
   DataStyleConfig,
   DisplayConfig,
   EffectsConfig,
@@ -11,6 +11,7 @@ import {
   SocialSharingConfig,
   StyleConfig,
 } from "@/types";
+
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
@@ -20,9 +21,7 @@ const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
-};
+  };
 
 const display: DisplayConfig = {
   location: true,

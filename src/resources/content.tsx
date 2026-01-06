@@ -1,22 +1,17 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Uthithmenon",
+  lastName: "Ravitharan",
+  name: "Uthithmenon Ravitharan",
+  role: "Software Engineer",
+  avatar: "/IMG_8110.jpeg",
+  email: "Uthithmenon@gmail.com",
+  location: "America/Toronto", 
+  languages: ["English"], 
 };
 
-const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
-};
 
 const social: Social = [
   // Links are automatically displayed.
@@ -25,26 +20,26 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Uthith18",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/uthith-ravi/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/uthithravi/",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -60,7 +55,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Just a Guy who likes playing with Computers and Data</>,
   featured: {
     display: true,
     title: (
@@ -76,10 +71,20 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+     Hey, I’m{" "}
+      <Text as="span" size="xl" weight="strong">
+        Uthith
+      </Text>
+      . I build software, play with data, and occasionally pretend I know what
+      I’m doing.
+      <br />
+      Mostly though, I just enjoy making computers do useful (and sometimes fun)
+      things.
 </>
   ),
 };
+
+
 
 const about: About = {
   path: "/about",
@@ -95,141 +100,155 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/uthith-ravi-lyxg31/30min",
   },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
-  },
-  work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
-  },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+intro: {
+  display: true,
+  title: "Introduction",
+  description: (
+    <>
+      I’m a software engineering graduate from York University with a strong
+      interest in backend systems, data, and full-stack development. I enjoy
+      building practical software, working with real data, and turning ideas
+      into working products.
+    </>
+  ),
+},
+
+work: {
+  display: true,
+  title: "Work Experience",
+  experiences: [
+    {
+      company: "International Justice Mission",
+      timeframe: "Sept 2024 – Apr 2025",
+      role: "Software Developer / Analyst",
+      achievements: [
+        <>
+          Built a Chrome extension to flag fast fashion websites linked to child
+          labor, using web scraping and analytics to populate an ethical
+          company database.
+        </>,
+        <>
+          Developed interactive dashboards with Python (Pandas, Matplotlib) and
+          SQL to help stakeholders identify trends and make faster,
+          data-driven decisions.
+        </>,
+        <>
+          Implemented real-time alerts and a user-friendly popup UI using
+          JavaScript, HTML, and CSS.
+        </>,
+      ],
+      images: [],
+    },
+    {
+      company: "Apple Canada",
+      timeframe: "Apr 2023 – Present",
+      role: "Genius",
+      achievements: [
+        <>
+          Delivered efficient and empathetic technical support for Mac and
+          iPhone, consistently exceeding service time standards.
+        </>,
+        <>
+          Maintained teammate satisfaction ratings above 85% by clearly
+          explaining technical issues and building customer trust.
+        </>,
+        <>
+          Achieved Apple hardware repair certification, demonstrating expertise
+          in diagnosing and resolving complex device issues.
+        </>,
+      ],
+      images: [],
+    },
+    {
+      company: "Apple Canada",
+      timeframe: "Apr 2022 – Apr 2023",
+      role: "Technical Expert",
+      achievements: [
+        <>
+          Diagnosed and resolved complex hardware and software issues on first
+          contact using advanced Apple system knowledge.
+        </>,
+        <>
+          Translated technical problems into clear, actionable explanations to
+          support informed customer decisions.
+        </>,
+      ],
+      images: [],
+    },
+  ],
+},
+
+studies: {
+  display: true,
+  title: "Education",
+  institutions: [
+    {
+      name: "Lassonde School of Engineering, York University",
+      description: (
+        <>
+          Bachelor of Engineering (Honours) in Software Engineering · GPA:
+          3.4/4.0
+        </>
+      ),
+    },
+  ],
+},
+
+technical: {
+  display: true,
+  title: "Technical Skills",
+  skills: [
+    {
+      title: "Programming Languages",
+      description: (
+        <>Strong foundation in backend, scripting, and web development.</>
+      ),
+      tags: [
+        { name: "Java", icon: "java" },
+        { name: "Python", icon: "python" },
+        { name: "SQL", icon: "database" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "TypeScript", icon: "typescript" },
+      ],
+      images: [],
+    },
+    {
+      title: "Frameworks & Tools",
+      description: (
+        <>
+          Experience building full-stack applications, APIs, and data-driven
+          systems.
+        </>
+      ),
+      tags: [
+        { name: "React", icon: "react" },
+        { name: "Node.js", icon: "nodejs" },
+        { name: "Express", icon: "express" },
+        { name: "Docker", icon: "docker" },
+        { name: "Git", icon: "git" },
+      ],
+      images: [],
+    },
+    {
+      title: "Data & Analytics",
+      description: (
+        <>
+          Comfortable working with datasets, dashboards, and automation for
+          real-world decision making.
+        </>
+      ),
+      tags: [
+        { name: "Pandas", icon: "python" },
+        { name: "NumPy", icon: "python" },
+        { name: "Matplotlib", icon: "chart" },
+        { name: "scikit-learn", icon: "ai" },
+      ],
+      images: [],
+    },
+  ],
+},
 };
 
 const blog: Blog = {
@@ -301,4 +320,6 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const newsletter = false;
+
+export { person, social, home, about, blog, work, gallery };
